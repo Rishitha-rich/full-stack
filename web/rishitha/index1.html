@@ -1,0 +1,97 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title> login </title> 
+<link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    <form class="login-form" onsubmit="login(event)">
+        <input type="email" name="" class="login-input" id="email" placeholder="email" required/>
+        <input type="password" name="" class="login-input" id="password"" placeholder="password" required/>
+        <input type="submit" value="login" class="login-btn"/>
+
+    </form>
+<button class="login-btn" onclick="myfunction()"> Click </body> </button>
+</body>
+
+<script>
+    console.log("Hello");
+    let x="10";
+    x=30;
+    console.log(x);
+    x-false;
+    console.log(x);
+    x=null;
+    console.log(x);
+    x=undefined
+    console.log(x);
+    let obj={
+        name: "a",
+        loc: "d",
+        age:200,
+        isalive: false
+    }
+    let obj2 = {
+        name:"a1",
+        loc:"b2",
+        age:0,
+        isalive:true
+    }
+    console.log(obj2.name)
+    const{name,loc,age,isalive}=obj2
+    console.log(name)
+
+    let arr=["a", obj , x , obj2]
+    let arr2=[1,2,3,4,5,6];
+    let arr3=[arr,"sdfghj",arr2];
+    let arr4=[...arr,"sdfgh",...arr2];
+    console.log(arr3);
+    console.log(arr4);
+
+        function myfunction()
+        {
+            console.error("Hello")
+            console.warn("Hello")
+        }
+        //myfunction()
+        function login(event)
+        {
+            event.preventDefault()
+            let email =document.getElementById('email').value;
+            let password =document.getElementById('email').value;
+            console.log("login:" +email + " " + password);
+        }if(password.length < 5)
+        {
+alert('password should contain more than 5 letters')
+        }
+else if (email=="rishi@gmail.com" && password =="123456")
+{
+    alert('Login success')
+    API()
+}
+else{
+alert('invalid credentials')
+}
+      async  function API()
+        {
+            console.log("called API");
+            try{
+                const response = await fetch('https://671b717f2c842d92c37ff1e4.mockapi.io/API/Users')
+                if(response.status === 200) 
+            {
+                console.log("success")
+                console.log(await response.json())
+            }
+        }
+            catch(error)
+            {
+                console.error(error)
+            }
+            }
+       // API()
+
+    
+</script>
+</html>
